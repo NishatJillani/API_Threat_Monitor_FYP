@@ -1,114 +1,42 @@
-# API_Threat_Monitor_FYP 
+# 🚀 API Threat Monitor
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+![VirusTotal API](https://img.shields.io/badge/API-VirusTotal-red)
 
-## 📌 Project Overview
-Cybersecurity threats are evolving, requiring sophisticated techniques to detect and mitigate potential risks. This project leverages **machine learning (LSTM model)** and **VirusTotal API integration** to automate **malware Detection**. By extracting key features from malware analysis reports and classifying files based on their behavior, this system enhances threat intelligence and provides a user-friendly **GUI for seamless interaction**.
+## 🎯 Project Overview
+**API Threat Monitor** is an advanced malware detection system that uses a **Long Short-Term Memory (LSTM)** model and **VirusTotal API** integration. It automatically classifies files as malicious or safe, extracting features from malware reports and checking file hashes against VirusTotal's database. 
 
-## 🔍 Key Objectives
-- **Enhance Cybersecurity Measures**: Automate the Detection of malicious files.
-- **Leverage Machine Learning**: Employ an **LSTM-based classification model** to distinguish between malicious and non-malicious files.
-- **Integrate with VirusTotal API**: Validate file hashes against VirusTotal's extensive malware database.
-- **User-Centric Interface**: Provide an intuitive **GUI for dataset analysis and interaction**.
-
----
-
-## Features
-- **Automated Feature Extraction**: Parses malware analysis reports and structures data for classification.
-- **Machine Learning-Based Classification**: Utilizes **LSTM models** to categorize files accurately.
-- **VirusTotal API Integration**: Checks file hashes against known malware databases.
-- **Interactive GUI**: Enables users to upload files, analyze datasets, and visualize classification results.
-- **Scalable & Adaptive**: Designed for future enhancements, supporting real-time malware detection and improved feature engineering.
+🔥 Features an intuitive **GUI** for seamless interaction and visualization.
 
 ---
 
-## Setup & Execution Instructions
-### **Prerequisites**
-Ensure the following dependencies are installed:
+## 🔍 Key Features
+- 🔑 **Automated Feature Extraction**: Extracts key metadata from JSON reports.
+- 🤖 **LSTM Classification Model**: Accurate detection of malware.
+- 🔐 **VirusTotal API Integration**: Checks file hashes against a vast malware database.
+- 🖥️ **Interactive GUI**: User-friendly interface for file uploads and result visualization.
+- ⚡ **Real-Time Detection**: Ready for dynamic threat analysis and future enhancements.
+
+---
+
+## 📦 Tech Stack
+- **Python 3.x** - Core programming language
+- **TensorFlow/Keras** - Deep learning model (LSTM)
+- **Tkinter** - Graphical User Interface
+- **VirusTotal API** - Malware hash validation
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+Ensure you have the following installed:
+- **Python 3.x**
+- Required libraries:
 ```bash
 pip install -r requirements.txt
-```
-
-### **Steps to Run the Project**
-1. **Download the dataset** and open it using Utorrent.
-   - **Dataset Link**: [VirusShare_00000.zip.torrent](http://71.105.224.114:6969/torrents/VirusShare_00000.zip.torrent?3B9193870FF50310C54EA415C2F21274A795B76C)
-2. **Extract the `FYP Final Script` folder**.
-3. **Move the dataset to the `Malware` folder** inside the `destination` directory.
-4. **Ensure `destination` and `analyses report 1` folders are inside `FYP Final Script`**.
-5. **Update file paths in the code** according to your local system structure.
-6. **Execute the script** to perform malware classification.
-
-### **⚠️ Important Notice**
-- The original **analysis report** contained **100 files**; due to **GitHub storage constraints**, only **50 files** have been uploaded.
-
----
-
-## 🔄 Project Workflow
-### **1️⃣ Feature Extraction from JSON Reports**
-- Parses JSON reports stored in the **`analyses report 1/`** directory.
-- Extracts critical metadata including **hash values, severity scores, file size, and execution duration**.
-- Converts unstructured data into a **structured CSV dataset (`dataset_file.csv`)** for training and analysis.
-
-#### **📂 Relevant Files**
-| File | Description |
-|------|------------|
-| `analyses report 1/` | Contains malware behavior reports in JSON format |
-| `dataset_file.csv` | Processed dataset for machine learning classification |
-| `Final_scriptt.py` | Handles feature extraction and dataset processing |
-
----
-
-### **2️⃣ Malware Hash Matching (VirusTotal API Integration)**
-- Compares extracted file hashes with **VirusTotal’s malware database**.
-- If a match is found, the file is **flagged as malicious** without further classification.
-- If no match is found, the file proceeds to the **LSTM classification model**.
-
-#### **📂 Relevant Files**
-| File | Description |
-|------|------------|
-| `malware_hascode/` | Contains known malware hashes |
-| `VTService.py` | Interfaces with VirusTotal API for malware validation |
-| `malware_vt_result/` | Stores VirusTotal scan results |
-
----
-
-### **3️⃣ Deep Learning-Based Malware Classification (LSTM Model)**
-- Utilizes **Long Short-Term Memory (LSTM)** neural networks for accurate classification.
-- Processes extracted dataset features to distinguish malware from benign files.
-- Evaluates model performance using **accuracy, precision, recall, and F1-score**.
-
-#### **📂 Relevant Files**
-| File | Description |
-|------|------------|
-| `dataset_file.csv` | Training dataset for LSTM model |
-| `Final_scriptt.py` | Implements the machine learning classification pipeline |
-
----
-
-### **4️⃣ Interactive GUI for User Interaction**
-- Provides an intuitive **graphical user interface (Tkinter)**.
-- Enables users to **upload files, run classification, and visualize results**.
-- Enhances user experience with **real-time dataset interaction**.
-
-#### **📂 Relevant Files**
-| File | Description |
-|------|------------|
-| `Final_scriptt.py` | Contains Tkinter-based GUI implementation |
-
----
-
-## 📂 Project Directory Structure
-```
-📂 analyses report 1
-📂 destination
-   📂 malware_hascode  
-   📂 malware_vt_result
-📂 FYP Final Script
-   ├── dataset_file.csv
-   ├── Final_scriptt.py
-   ├── VTService.py
-```
-
----
 
 ## 📊 Model Performance Metrics
 | Metric  | Score |
@@ -130,5 +58,3 @@ pip install -r requirements.txt
 
 ## 👨‍💻 Contributors
 - **Nishat Jillani** - Developer
-
----
