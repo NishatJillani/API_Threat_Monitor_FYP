@@ -1,4 +1,4 @@
-# API-Based Intelligent Malware Detection
+# API-Based Intelligent Malware Detection FYP
 
 ## 📌 Project Overview
 Cybersecurity threats are evolving, requiring sophisticated techniques to detect and mitigate potential risks. This project leverages **machine learning (LSTM model)** and **VirusTotal API integration** to automate **malware Detection**. By extracting key features from malware analysis reports and classifying files based on their behavior, this system enhances threat intelligence and provides a user-friendly **GUI for seamless interaction**.
